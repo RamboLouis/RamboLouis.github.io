@@ -149,7 +149,7 @@
 
 
   <meta name="description" content="生命周期官方文档: https://facebook.github.io/react/docs/react-component.html#shouldcomponentupdate  当创建组件的实例并将其插入到DOM中时，将调用这些方法：   1、constructor()    React组件的构造函数。在安装React组件的构造函数之前调用它。在实现Component子类的构造函数时，应该在">
-<meta name="keywords" content="ReactNative,React,JavaScript">
+<meta name="keywords" content="JavaScript,ReactNative,React">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ReactNative学习-React.js生命周期">
 <meta property="og:url" content="http://RamboLu.top/2017/02/27/ReactNative学习-React-js生命周期/index.html">
@@ -157,7 +157,7 @@
 <meta property="og:description" content="生命周期官方文档: https://facebook.github.io/react/docs/react-component.html#shouldcomponentupdate  当创建组件的实例并将其插入到DOM中时，将调用这些方法：   1、constructor()    React组件的构造函数。在安装React组件的构造函数之前调用它。在实现Component子类的构造函数时，应该在">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/RamboLouis/MyHexo/master/hexo-source/images/2017-02-27/react-lifecycle.png">
-<meta property="og:updated_time" content="2019-04-13T06:44:43.000Z">
+<meta property="og:updated_time" content="2019-04-13T06:46:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ReactNative学习-React.js生命周期">
 <meta name="twitter:description" content="生命周期官方文档: https://facebook.github.io/react/docs/react-component.html#shouldcomponentupdate  当创建组件的实例并将其插入到DOM中时，将调用这些方法：   1、constructor()    React组件的构造函数。在安装React组件的构造函数之前调用它。在实现Component子类的构造函数时，应该在">
@@ -548,9 +548,7 @@
 <blockquote>
 <p>React组件的构造函数。在安装React组件的构造函数之前调用它。在实现Component子类的构造函数时，应该在任何其他语句之前调用super（props）。</p>
 </blockquote>
-<blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; constructor(props) &#123;</span><br><span class="line">  super(props);</span><br><span class="line">&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">constructor(props) &#123;</span><br><span class="line">  super(props);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p> <strong>2、componentWillMount()</strong> </p>
 <blockquote>
 <p>组件初始化时只调用，以后组件更新不调用，整个生命周期只调用一次，此时可以修改state。</p>
@@ -611,11 +609,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
             <a href="/tags/ReactNative/" rel="tag"># ReactNative</a>
           
             <a href="/tags/React/" rel="tag"># React</a>
-          
-            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
         </div>
       
