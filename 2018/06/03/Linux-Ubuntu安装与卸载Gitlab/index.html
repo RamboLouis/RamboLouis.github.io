@@ -161,7 +161,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/RamboLouis/MyHexo/master/hexo-source/images/2018-06-03/gitlab-root-1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/RamboLouis/MyHexo/master/hexo-source/images/2018-06-03/gitlab-version.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/RamboLouis/MyHexo/master/hexo-source/images/2018-06-03/gitlab-error-1.png">
-<meta property="og:updated_time" content="2019-04-27T08:11:09.000Z">
+<meta property="og:updated_time" content="2019-04-27T08:13:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux-安装、卸载和配置Gitlab">
 <meta name="twitter:description" content="一、安装Gitlab1.安装并配置必要的依赖关系 Ubuntu系统 12sudo apt-get updatesudo apt-get install -y curl openssh-server ca-certificates  然后，安装Postfix发送通知邮件。如果您想使用其他解决方案发送电子邮件，跳过此步骤并在安装GitLab后配置外部SMTP服务器。ps:配置外部SMTP服务器: ht">
@@ -659,8 +659,7 @@
 <p><a href="https://gitlab.com/xhang/gitlab" target="_blank" rel="noopener">https://gitlab.com/xhang/gitlab</a></p>
 <h3 id="1-查看gitlab版本"><a href="#1-查看gitlab版本" class="headerlink" title="1. 查看gitlab版本"></a>1. 查看<code>gitlab</code>版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /opt/gitlab/embedded/service/gitlab-rails/VERSION</span><br></pre></td></tr></table></figure>
 <p><img src="https://raw.githubusercontent.com/RamboLouis/MyHexo/master/hexo-source/images/2018-06-03/gitlab-version.png" alt></p>
-<p>2.下载汉化包</p>
-<ul>
+<h3 id="2-下载汉化包"><a href="#2-下载汉化包" class="headerlink" title="2.下载汉化包"></a>2.下载汉化包</h3><ul>
 <li>wget方式(指定版本)</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://gitlab.com/xhang/gitlab/-/archive/10-8-stable-zh/gitlab-10-8-stable-zh.tar.bz2</span><br><span class="line">或者</span><br><span class="line">wget https://gitlab.com/xhang/gitlab/repository/10-8-stable-zh/archive.tar.bz2 -O gitlab-10-8-stable-zh.tar.bz2</span><br></pre></td></tr></table></figure>
@@ -668,26 +667,19 @@
 <li>git clone方式(最新版本)</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://gitlab.com/xhang/gitlab.git</span><br></pre></td></tr></table></figure>
-<ul>
-<li>解压并查看</li>
-</ul>
-<p>ps:<br>如果使用git clone方式,则无需再解压</p>
+<h3 id="3-解压并查看"><a href="#3-解压并查看" class="headerlink" title="3.解压并查看"></a>3.解压并查看</h3><p>ps:<br>如果使用git clone方式,则无需再解压</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xf gitlab-10-8-stable-zh.tar.bz2</span><br></pre></td></tr></table></figure>
-<p>查看版本号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cat gitlab-10-8-stable-zh/VERSION </span><br><span class="line">或者</span><br><span class="line">git clone方式:</span><br><span class="line">cat gitlab/VERSION</span><br></pre></td></tr></table></figure>
 <ul>
-<li>备份gitlab</li>
+<li>查看版本号</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r /opt/gitlab/embedded/service/gitlab-rails&#123;,.ori&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cat gitlab-10-8-stable-zh/VERSION </span><br><span class="line">或者</span><br><span class="line">git clone方式:</span><br><span class="line">cat gitlab/VERSION</span><br></pre></td></tr></table></figure>
+<h3 id="4-备份gitlab"><a href="#4-备份gitlab" class="headerlink" title="4.备份gitlab"></a>4.备份gitlab</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r /opt/gitlab/embedded/service/gitlab-rails&#123;,.ori&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>覆盖</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp -rf gitlab-10-8-stable-zh/* /opt/gitlab/embedded/service/gitlab-rails/</span><br></pre></td></tr></table></figure>
 <p><img src="https://raw.githubusercontent.com/RamboLouis/MyHexo/master/hexo-source/images/2018-06-03/gitlab-error-1.png" alt></p>
-<ul>
-<li>重起配置及重启gitlab</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo gitlab-ctl reconfigure</span><br><span class="line">sudo gitlab-ctl restart</span><br></pre></td></tr></table></figure>
+<h3 id="5-重起配置及重启gitlab"><a href="#5-重起配置及重启gitlab" class="headerlink" title="5.重起配置及重启gitlab"></a>5.重起配置及重启gitlab</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo gitlab-ctl reconfigure</span><br><span class="line">sudo gitlab-ctl restart</span><br></pre></td></tr></table></figure>
 <h2 id="四、配置Gitlab"><a href="#四、配置Gitlab" class="headerlink" title="四、配置Gitlab"></a>四、配置Gitlab</h2><ul>
 <li>查看gitlab配置</li>
 </ul>
@@ -737,7 +729,6 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitlab-ctl start</span><br></pre></td></tr></table></figure>
 <p>迁移成功</p>
-<p>### </p>
 <h2 id="五、修改Gitlab的Root密码"><a href="#五、修改Gitlab的Root密码" class="headerlink" title="五、修改Gitlab的Root密码"></a>五、修改Gitlab的Root密码</h2><ul>
 <li>进入 gitlab 生产控制台</li>
 </ul>
@@ -1086,7 +1077,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、安装Gitlab"><span class="nav-number">1.</span> <span class="nav-text">一、安装Gitlab</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装并配置必要的依赖关系"><span class="nav-number">1.1.</span> <span class="nav-text">1.安装并配置必要的依赖关系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Ubuntu系统"><span class="nav-number">1.1.1.</span> <span class="nav-text">Ubuntu系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CentOS系统"><span class="nav-number">1.1.2.</span> <span class="nav-text">CentOS系统</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装成功"><span class="nav-number">1.2.</span> <span class="nav-text">2.安装成功</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-配置gitlab"><span class="nav-number">1.3.</span> <span class="nav-text">3.配置gitlab</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-登录gitlab"><span class="nav-number">1.4.</span> <span class="nav-text">4.登录gitlab</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、卸载Gitlab"><span class="nav-number">2.</span> <span class="nav-text">二、卸载Gitlab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、汉化Gitlab"><span class="nav-number">3.</span> <span class="nav-text">三、汉化Gitlab</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-查看gitlab版本"><span class="nav-number">3.1.</span> <span class="nav-text">1. 查看gitlab版本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、配置Gitlab"><span class="nav-number">4.</span> <span class="nav-text">四、配置Gitlab</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#gitlab-备份"><span class="nav-number">4.1.</span> <span class="nav-text">gitlab 备份</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改gitlab自带nginx"><span class="nav-number">4.2.</span> <span class="nav-text">修改gitlab自带nginx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitlab迁移"><span class="nav-number">4.3.</span> <span class="nav-text">gitlab迁移</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitlab恢复"><span class="nav-number">4.4.</span> <span class="nav-text">gitlab恢复</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、修改Gitlab的Root密码"><span class="nav-number">5.</span> <span class="nav-text">五、修改Gitlab的Root密码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、安装Gitlab"><span class="nav-number">1.</span> <span class="nav-text">一、安装Gitlab</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装并配置必要的依赖关系"><span class="nav-number">1.1.</span> <span class="nav-text">1.安装并配置必要的依赖关系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Ubuntu系统"><span class="nav-number">1.1.1.</span> <span class="nav-text">Ubuntu系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CentOS系统"><span class="nav-number">1.1.2.</span> <span class="nav-text">CentOS系统</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装成功"><span class="nav-number">1.2.</span> <span class="nav-text">2.安装成功</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-配置gitlab"><span class="nav-number">1.3.</span> <span class="nav-text">3.配置gitlab</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-登录gitlab"><span class="nav-number">1.4.</span> <span class="nav-text">4.登录gitlab</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、卸载Gitlab"><span class="nav-number">2.</span> <span class="nav-text">二、卸载Gitlab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、汉化Gitlab"><span class="nav-number">3.</span> <span class="nav-text">三、汉化Gitlab</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-查看gitlab版本"><span class="nav-number">3.1.</span> <span class="nav-text">1. 查看gitlab版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-下载汉化包"><span class="nav-number">3.2.</span> <span class="nav-text">2.下载汉化包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-解压并查看"><span class="nav-number">3.3.</span> <span class="nav-text">3.解压并查看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-备份gitlab"><span class="nav-number">3.4.</span> <span class="nav-text">4.备份gitlab</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-重起配置及重启gitlab"><span class="nav-number">3.5.</span> <span class="nav-text">5.重起配置及重启gitlab</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、配置Gitlab"><span class="nav-number">4.</span> <span class="nav-text">四、配置Gitlab</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#gitlab-备份"><span class="nav-number">4.1.</span> <span class="nav-text">gitlab 备份</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改gitlab自带nginx"><span class="nav-number">4.2.</span> <span class="nav-text">修改gitlab自带nginx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitlab迁移"><span class="nav-number">4.3.</span> <span class="nav-text">gitlab迁移</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitlab恢复"><span class="nav-number">4.4.</span> <span class="nav-text">gitlab恢复</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、修改Gitlab的Root密码"><span class="nav-number">5.</span> <span class="nav-text">五、修改Gitlab的Root密码</span></a></li></ol></div>
             
 
           </div>
