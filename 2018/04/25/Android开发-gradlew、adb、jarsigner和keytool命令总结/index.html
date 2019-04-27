@@ -148,23 +148,24 @@
 
 
 
-  <meta name="description" content="Fire proves gold,adversity proves men.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="RamboLu Blog">
-<meta property="og:url" content="http://RamboLu.top/archives/2018/index.html">
+  <meta name="description" content="gradlew 查看项目依赖库依赖  ./gradlew app:dependencies  导出项目依赖库依赖至某个文件  ./gradlew app:dependencies &amp;gt; xxxx.txt adb 查询设备  adb devices  卸载程序  adb uninstall &amp;lt;package&amp;gt;  覆盖安装程序(出现包名相同时使用,否则报错)  adb install">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android开发-gradlew、adb、keytool、jarsigner和fastboot命令总结">
+<meta property="og:url" content="http://RamboLu.top/2018/04/25/Android开发-gradlew、adb、jarsigner和keytool命令总结/index.html">
 <meta property="og:site_name" content="RamboLu Blog">
-<meta property="og:description" content="Fire proves gold,adversity proves men.">
+<meta property="og:description" content="gradlew 查看项目依赖库依赖  ./gradlew app:dependencies  导出项目依赖库依赖至某个文件  ./gradlew app:dependencies &amp;gt; xxxx.txt adb 查询设备  adb devices  卸载程序  adb uninstall &amp;lt;package&amp;gt;  覆盖安装程序(出现包名相同时使用,否则报错)  adb install">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-27T08:05:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RamboLu Blog">
-<meta name="twitter:description" content="Fire proves gold,adversity proves men.">
+<meta name="twitter:title" content="Android开发-gradlew、adb、keytool、jarsigner和fastboot命令总结">
+<meta name="twitter:description" content="gradlew 查看项目依赖库依赖  ./gradlew app:dependencies  导出项目依赖库依赖至某个文件  ./gradlew app:dependencies &amp;gt; xxxx.txt adb 查询设备  adb devices  卸载程序  adb uninstall &amp;lt;package&amp;gt;  覆盖安装程序(出现包名相同时使用,否则报错)  adb install">
 
 
 
 
 
 
-  <link rel="canonical" href="http://RamboLu.top/archives/2018/">
+  <link rel="canonical" href="http://RamboLu.top/2018/04/25/Android开发-gradlew、adb、jarsigner和keytool命令总结/">
 
 
 
@@ -174,7 +175,7 @@
   };
 </script>
 
-  <title>归档 | RamboLu Blog</title>
+  <title>Android开发-gradlew、adb、keytool、jarsigner和fastboot命令总结 | RamboLu Blog</title>
   
 
 
@@ -222,7 +223,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
@@ -296,7 +297,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -401,383 +402,284 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      
-      <span class="archive-page-counter">
-        
-        
-         
-        
-        还行! 目前共计 38 篇日志。 继续努力。
-      </span>
-      
+  
 
-      
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://RamboLu.top/2018/04/25/Android开发-gradlew、adb、jarsigner和keytool命令总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="RamboLu">
+      <meta itemprop="description" content="Fire proves gold,adversity proves men.">
+      <meta itemprop="image" content="/images/IronMan.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RamboLu Blog">
+    </span>
+
+    
+      <header class="post-header">
 
         
         
+          <h1 class="post-title" itemprop="name headline">Android开发-gradlew、adb、keytool、jarsigner和fastboot命令总结
+
+              
+            
+          </h1>
         
 
-        
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-04-25 18:38:26" itemprop="dateCreated datePublished" datetime="2018-04-25T18:38:26+08:00">2018-04-25</time>
+            
+
+            
+          </span>
+
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/01/Web学习-freeCodeCamp课程学习/" itemprop="url">
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
               
-                <span itemprop="name">Web学习-freeCodeCamp课程学习</span>
+                <span class="post-meta-item-text">分类于</span>
               
-            </a>
-        
-      </h2>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-01T10:28:45+08:00" content="2018-11-01">
-          11-01
-        </time>
-      </div>
+                
+                
+              
+            </span>
+          
 
-    </header>
-  </article>
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/04/25/Android开发-gradlew、adb、jarsigner和keytool命令总结/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/04/25/Android开发-gradlew、adb、jarsigner和keytool命令总结/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
+          
+          
+             <span id="/2018/04/25/Android开发-gradlew、adb、jarsigner和keytool命令总结/" class="leancloud_visitors" data-flag-title="Android开发-gradlew、adb、keytool、jarsigner和fastboot命令总结">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/11/iOS-Xcode-10-library-not-found-for-lstdc-6-0-9/" itemprop="url">
-              
-                <span itemprop="name">iOS-Xcode 10 library not found for -lstdc++.6.0.9</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-10-11T17:29:22+08:00" content="2018-10-11">
-          10-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/06/03/Linux-Ubuntu安装与卸载Gitlab/" itemprop="url">
-              
-                <span itemprop="name">Linux-Ubuntu安装、卸载和配置Gitlab</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-06-03T15:10:21+08:00" content="2018-06-03">
-          06-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h2 id="gradlew"><a href="#gradlew" class="headerlink" title="gradlew"></a>gradlew</h2><ul>
+<li>查看项目依赖库依赖</li>
+</ul>
+<p><code>./gradlew app:dependencies</code></p>
+<ul>
+<li>导出项目依赖库依赖至某个文件</li>
+</ul>
+<p><code>./gradlew app:dependencies &gt; xxxx.txt</code></p>
+<h2 id="adb"><a href="#adb" class="headerlink" title="adb"></a>adb</h2><ul>
+<li>查询设备</li>
+</ul>
+<p><code>adb devices</code></p>
+<ul>
+<li>卸载程序</li>
+</ul>
+<p><code>adb uninstall &lt;package&gt;</code></p>
+<ul>
+<li>覆盖安装程序(出现包名相同时使用,否则报错)</li>
+</ul>
+<p><code>adb install -r &lt;path&gt;</code></p>
+<ul>
+<li>安装指定设备</li>
+</ul>
+<p><code>adb -s &lt;device&gt;  install -r &lt;path&gt;</code></p>
+<h2 id="keytool"><a href="#keytool" class="headerlink" title="keytool"></a>keytool</h2><ul>
+<li>查询证书指纹 (SHA1) - 输入密码</li>
+</ul>
+<p><code>keytool -list -keystore &lt;storeFile&gt;</code></p>
+<ul>
+<li>查询证书指纹 (SHA1)</li>
+</ul>
+<p><code>keytool -list -keystore &lt;storeFile&gt; -storepass &lt;keyPassword&gt;</code></p>
+<ul>
+<li>查询详细证书指纹 (SHA1)</li>
+</ul>
+<p><code>keytool -list -v -keystore &lt;storeFile&gt; -storepass &lt;keyPassword&gt;</code></p>
+<ul>
+<li>修改keystore密码：</li>
+</ul>
+<p><code>keytool -storepasswd -keystore [.keystore或.jks文件]</code></p>
+<ul>
+<li>修改keystore的alias：</li>
+</ul>
+<p><code>keytool -changealias -keystore [.keystore或.jks文件] -alias [要修改.keystore或.jks文件中别名别名] -destalias [新别名]</code></p>
+<ul>
+<li>修改alias的密码：</li>
+</ul>
+<p><code>keytool -keypasswd -keystore [.keystore或.jks文件] -alias [.keystore或.jks文件中别名]</code></p>
+<h2 id="jarsigner"><a href="#jarsigner" class="headerlink" title="jarsigner"></a>jarsigner</h2><ul>
+<li>查看apk包签名：</li>
+</ul>
+<p><code>jarsigner -verify -verbose -certs [.apk包]</code></p>
+<ul>
+<li>给apk包打签名</li>
+</ul>
+<p><code>jarsigner -verbose -keystore [.keystore或.jks文件绝对路径] -signedjar [签名以后的apk文件绝对路径] [要签名的apk文件绝对路径] [.keystore或.jks文件中的别名]</code></p>
+<h2 id="fastboot"><a href="#fastboot" class="headerlink" title="fastboot"></a>fastboot</h2><ul>
+<li>查看手机进入fastboot模式连接设备</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot devices</span><br></pre></td></tr></table></figure>
+<ul>
+<li>以小米手机为例, 音量- 加 电源键 fastboot 模式</li>
+</ul>
+<ol>
+<li><p>如果需要擦除全部数据就把线刷包里的flash_all.sh拖进终端窗口</p>
+</li>
+<li><p>如果需要擦除所有数据并保留SD卡和data分区的把flash_all_except_data_storage.sh拖进终端窗口</p>
+</li>
+<li><p>如果需要擦除所有数据并保留SD卡数据的把flash_all_except_storage.sh拖进终端窗口</p>
+</li>
+</ol>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/26/Liunx-Ubuntu删除和部署Nginx/" itemprop="url">
-              
-                <span itemprop="name">Liunx-Ubuntu删除和部署Nginx</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-05-26T21:06:49+08:00" content="2018-05-26">
-          05-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/10/Flutter开发-Flutter的SDK安装与初尝/" itemprop="url">
-              
-                <span itemprop="name">Flutter开发-Flutter的SDK安装与初尝</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-05-10T17:33:25+08:00" content="2018-05-10">
-          05-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/25/Android开发-gradlew、adb、jarsigner和keytool命令总结/" itemprop="url">
-              
-                <span itemprop="name">Android开发-gradlew、adb、keytool、jarsigner和fastboot命令总结</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-04-25T18:38:26+08:00" content="2018-04-25">
-          04-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/08/Linux-Ubuntu安装openssh-server/" itemprop="url">
-              
-                <span itemprop="name">Linux-Ubuntu安装openssh-server</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-04-08T14:41:17+08:00" content="2018-04-08">
-          04-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/03/27/Web开发-Android和iOS的WebView使用浏览器调试/" itemprop="url">
-              
-                <span itemprop="name">Web开发-Android和iOS浏览器调试手机web</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-03-27T18:19:10+08:00" content="2018-03-27">
-          03-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/07/Android开发-恩智浦NXP-i-MX7D开发板刷Android-Things系统/" itemprop="url">
-              
-                <span itemprop="name">Android开发-恩智浦NXP i.MX7D开发板刷Android Things系统心得</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-02-07T14:56:41+08:00" content="2018-02-07">
-          02-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/08/Linux-Ubuntu安装openssh-server/" rel="next" title="Linux-Ubuntu安装openssh-server">
+                <i class="fa fa-chevron-left"></i> Linux-Ubuntu安装openssh-server
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/10/Flutter开发-Flutter的SDK安装与初尝/" rel="prev" title="Flutter开发-Flutter的SDK安装与初尝">
+                Flutter开发-Flutter的SDK安装与初尝 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -798,8 +700,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1018,6 +929,22 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#gradlew"><span class="nav-number">1.</span> <span class="nav-text">gradlew</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#adb"><span class="nav-number">2.</span> <span class="nav-text">adb</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#keytool"><span class="nav-number">3.</span> <span class="nav-text">keytool</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jarsigner"><span class="nav-number">4.</span> <span class="nav-text">jarsigner</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fastboot"><span class="nav-number">5.</span> <span class="nav-text">fastboot</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -1194,6 +1121,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
+
+
 
   
 
@@ -1574,43 +1505,42 @@
   
   <script>
     
-    function showTime(Counter) {
-      var entries = [];
+    function addCount(Counter) {
       var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
 
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { "$in": entries } }) })
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
         .done(function ({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
+            
+            .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
+            })
+            
+            .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+            })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
+                .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function () {
+                  console.log('Failed to create');
+                });
+            
           }
         })
-        .fail(function ({ responseJSON }) {
-          console.log("LeanCloud Counter Error: " + responseJSON.code + " " + responseJSON.error);
-        });
+      .fail(function ({ responseJSON }) {
+        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
+      });
     }
     
 
@@ -1630,9 +1560,7 @@
             });
           };
           
-          if ($('.post-title-link').length >= 1) {
-            showTime(Counter);
-          }
+          addCount(Counter);
           
         })
     });
