@@ -156,7 +156,7 @@
 <meta property="og:site_name" content="RamboLu Blog">
 <meta property="og:description" content="一、删除Nginx 删除Nginx及配置文件  1sudo apt-get --purge remove nginx  自动移除全部不使用的软件包  1sudo apt-get autoremove ngix  查看与Nginx相关的软件  1dpkg --get-selections|grep nginx  继续删除与Nginx有关的软件  12sudo apt-get --purge remo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-29T11:02:41.000Z">
+<meta property="og:updated_time" content="2019-04-29T11:04:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Liunx-Ubuntu删除和部署Nginx">
 <meta name="twitter:description" content="一、删除Nginx 删除Nginx及配置文件  1sudo apt-get --purge remove nginx  自动移除全部不使用的软件包  1sudo apt-get autoremove ngix  查看与Nginx相关的软件  1dpkg --get-selections|grep nginx  继续删除与Nginx有关的软件  12sudo apt-get --purge remo">
@@ -579,7 +579,8 @@
 <li>检验<code>Nginx</code>配置文件是否正确</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 进入sbin 文件</span><br><span class="line">cd /usr/local/nginx/sbin</span><br><span class="line">./nginx -t</span><br></pre></td></tr></table></figure>
-<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/local/nginx/sbin/nginx -t -c /usr/local/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure></p>
+<p>或</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/local/nginx/sbin/nginx -t -c /usr/local/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure>
 <ul>
 <li>重启服务</li>
 </ul>

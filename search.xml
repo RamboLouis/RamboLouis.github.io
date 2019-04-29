@@ -43,14 +43,14 @@
         <category>Gitlab</category>
       </categories>
       <tags>
-        <tag>Gitlab</tag>
         <tag>Linux</tag>
+        <tag>Gitlab</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Liunx-Ubuntu删除和部署Nginx]]></title>
     <url>%2F2018%2F05%2F26%2FLiunx-Ubuntu%E5%88%A0%E9%99%A4%E5%92%8C%E9%83%A8%E7%BD%B2Nginx%2F</url>
-    <content type="text"><![CDATA[一、删除Nginx 删除Nginx及配置文件 1sudo apt-get --purge remove nginx 自动移除全部不使用的软件包 1sudo apt-get autoremove ngix 查看与Nginx相关的软件 1dpkg --get-selections|grep nginx 继续删除与Nginx有关的软件 12sudo apt-get --purge remove nginx-commonsudo apt-get --purge remove nginx-core 二、安装部署Nginx1、APT源安装(不推荐)1sudo apt-get install nginx 2、源码安装 通过官方提供的下载包进行安装 官方地址: http://nginx.org/en/download.html 1wget http://nginx.org/download/nginx-1.14.0.tar.gz 解压 1tar -zxvf nginx-1.14.0.tar.gz 进入nginx-1.14.0进行配置 1sudo ./configure 安装 1sudo make &amp;&amp; sudo make install 三、启动、重启Nginx启动Nginx安装目录地址 -c Nginx指定配置文件地址 1sudo /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf 重启 检验Nginx配置文件是否正确 123// 进入sbin 文件cd /usr/local/nginx/sbin./nginx -t 或1sudo /usr/local/nginx/sbin/nginx -t -c /usr/local/nginx/conf/nginx.conf 重启服务 1/usr/local/nginx/sbin/nginx -s reload]]></content>
+    <content type="text"><![CDATA[一、删除Nginx 删除Nginx及配置文件 1sudo apt-get --purge remove nginx 自动移除全部不使用的软件包 1sudo apt-get autoremove ngix 查看与Nginx相关的软件 1dpkg --get-selections|grep nginx 继续删除与Nginx有关的软件 12sudo apt-get --purge remove nginx-commonsudo apt-get --purge remove nginx-core 二、安装部署Nginx1、APT源安装(不推荐)1sudo apt-get install nginx 2、源码安装 通过官方提供的下载包进行安装 官方地址: http://nginx.org/en/download.html 1wget http://nginx.org/download/nginx-1.14.0.tar.gz 解压 1tar -zxvf nginx-1.14.0.tar.gz 进入nginx-1.14.0进行配置 1sudo ./configure 安装 1sudo make &amp;&amp; sudo make install 三、启动、重启Nginx启动Nginx安装目录地址 -c Nginx指定配置文件地址 1sudo /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf 重启 检验Nginx配置文件是否正确 123// 进入sbin 文件cd /usr/local/nginx/sbin./nginx -t 或 1sudo /usr/local/nginx/sbin/nginx -t -c /usr/local/nginx/conf/nginx.conf 重启服务 1/usr/local/nginx/sbin/nginx -s reload]]></content>
       <categories>
         <category>Linux</category>
       </categories>
@@ -206,8 +206,8 @@
         <category>ReactNative</category>
       </categories>
       <tags>
-        <tag>ReactNative</tag>
         <tag>JavaScript</tag>
+        <tag>ReactNative</tag>
         <tag>React</tag>
       </tags>
   </entry>
@@ -219,8 +219,8 @@
         <category>ReactNative</category>
       </categories>
       <tags>
-        <tag>ReactNative</tag>
         <tag>JavaScript</tag>
+        <tag>ReactNative</tag>
         <tag>React</tag>
       </tags>
   </entry>
@@ -232,8 +232,8 @@
         <category>ReactNative</category>
       </categories>
       <tags>
-        <tag>ReactNative</tag>
         <tag>JavaScript</tag>
+        <tag>ReactNative</tag>
         <tag>React</tag>
       </tags>
   </entry>
@@ -285,8 +285,8 @@
         <category>ReactNative</category>
       </categories>
       <tags>
-        <tag>ReactNative</tag>
         <tag>JavaScript</tag>
+        <tag>ReactNative</tag>
         <tag>React</tag>
       </tags>
   </entry>
